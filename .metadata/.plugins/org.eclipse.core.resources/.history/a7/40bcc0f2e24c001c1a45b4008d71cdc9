@@ -1,0 +1,69 @@
+package RGame;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.WindowConstants;
+
+public class howtoplay extends JFrame {
+	Image Howplay;
+	public howtoplay() {
+		super("HOW TO PLAY"); //타이틀
+		Howplay = Toolkit.getDefaultToolkit().createImage("E:\\java_수행\\im\\제목 없음 (2).png");
+		// TODO Auto-generated constructor stub
+		JPanel jPanel = new JPanel();
+		 setSize(720, 760);
+		 
+		JButton btn2 = new JButton("TO MAIN");
+		btn1.setBounds(450, 360, 140, 40);
+        jPanel.add(btn2);
+	   
+		 add(jPanel);
+
+        Dimension frameSize = getSize();
+        Dimension windowSize = Toolkit.getDefaultToolkit().getScreenSize();
+        setLocation((windowSize.width - frameSize.width) / 2,
+                (windowSize.height - frameSize.height) / 2); //화면 중앙에 띄우기
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setVisible(true);
+	
+        btn2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				 new Partmain();
+		         setVisible(false);
+			}
+		});
+	    
+	 
+	
+	}
+	
+	@Override
+	public void paint(Graphics g) {
+		// TODO Auto-generated method stub
+		super.paint(g);
+		g.drawImage(Howplay,0,0,this);	
+		g.setFont(new Font("TimesRaman",Font.BOLD ,20));
+		g.setColor(Color.BLACK);
+		g.drawString("RACOON JUMP GAME", 32, 80); //제목
+		
+		g.drawString("초록색 발판을 밟고 위로 올라가는 게임", 50, 140); 
+		g.drawString("스페이스바를 누르면 점프합니다", 50, 190); 
+		g.drawString("게임 내에서 랜덤으로 발생하는 ", 50, 250); 
+		g.drawString("라쿤의 사료를 먹으며 점수를 올리세요 ", 50, 290); 
+		g.drawString("사료를 먹으면 20점 추가", 50, 360); 
+		 	}
+	
+}
