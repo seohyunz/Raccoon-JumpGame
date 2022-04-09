@@ -1,13 +1,12 @@
 # Raccoon-JumpGame 🦝
-***
+
 ## Introduction
   * Creation Period: 2021-09-08 ~ 11-05
   * Component: Language Java
   * It is a game that features a simple pattern and operation <br> in which a raccoon jumps steps on a block, and climbs up.
-
+***
 ### Main Screen
 ![라쿠점프메인](https://user-images.githubusercontent.com/99002828/162566247-3088b42b-6712-43f8-ba13-582c29c78d84.png)
-
 Shows the start, method, and end buttons.
 
 ### How to play
